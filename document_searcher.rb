@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 
-
 class DocumentSearcher
 
 	attr_accessor :directory, :proximity
 
 	def initialize(directory, proximity=10)
-		@directory = directory
+		@directory = directory.chomp("/")
 		@proximity = proximity
 	end
 
